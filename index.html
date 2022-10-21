@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Cifrado AES</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+
+	</head>
+
+	<body>
+
+		<a class="back"></a>
+
+		<div id="stage">
+
+			<div id="step1">
+				<div class="content">
+					<a class="button encrypt green">Encriptar</a>
+					<a class="button decrypt magenta">Desencriptar</a>
+				</div>
+			</div>
+
+			<div id="step2">
+
+			<div class="content if-encrypt">
+				<h1>Elige el archivo que quieres cifrar</h1>
+				<a class="button browse blue">SUBIR</a>
+
+				<input type="file" id="encrypt-input" />
+			</div>
+
+			<div class="content if-decrypt">
+				<h1>Elige el archivo que quieres descifrar</h1>
+				<a class="button browse blue">SUBIR</a>
+
+				<input type="file" id="decrypt-input" />
+			</div>
+
+		</div>
+
+		<div id="step3">
+
+			<div class="content if-encrypt">
+				<h1>Ingresa una llave</h1>
+				<div class="row">
+					
+					<input type="radio" name="tclave" value="128">128 bits
+					<input type="radio" name="tclave" value="192">192 bits
+					<input type="radio" name="tclave" value="256">256 bits
+
+					<div class="column">
+						<input type="password" />
+						<a class="button process red">ENCRIPTAR</a>
+					</div>
+				</div>					
+			</div>
+
+			<div class="content if-decrypt">
+				<h1>Ingresa la llave</h1>
+				<h2>Usa la misma llave que usaste para cifrar</h2>
+
+				<input type="password" />
+				
+				<a class="button process red">DESENCRIPTAR</a>
+			</div>
+
+		</div>
+
+		<div id="step4">
+
+			<div class="content">
+
+				<input type="radio" name="tdescarga" value="doc">
+				<input type="radio" name="tdescarga" value="txt">
+				<input type="radio" name="tdescarga" value="pdf">
+
+				<h1>EL ARCHIVO ESTÁ LISTO, DA CLICK PARA DESCARGAR</h1>
+				<a class="button download green">DESCARGAR</a>
+			</div>
+
+		</div>
+	</div>
+
+	
+</body>
+
+	<script src="js/aes.js" type="text/JavaScript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+	<script src="js/script.js" type="text/JavaScript"></script>
+
+</html>
